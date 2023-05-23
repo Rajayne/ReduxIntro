@@ -52,18 +52,22 @@ Instead of using if statements, use switch statement.
 ```
 Example:
 if (action.type === "LOG") {
-    return {... state, count: state.count + 1}
+    return {... state, count: state.count + 1};
 } else if (action.type === "DELETE") {
-    return {... state, count: state.count - 1}
+    return {... state, count: state.count - 1};
 } else {
     return state;
 };
 
 switch (action.type) {
     case "LOG":
-        return {... state, count: state.count + 1}
+        return {... state, count: state.count + 1};
     case "DELETE":
-        return {... state, count: state.count - 1}
+        return {... state, count: state.count - 1};
     default: return state
 }
 ```
+
+## React
+
+npm install react-redux
