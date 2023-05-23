@@ -1,8 +1,10 @@
 const INITIAL_STATE = { count: 0 };
 
 function countReducer(state = INITIAL_STATE, action) {
-  // no way to update state yet,
-  // let's just return it.
+  if (action.type === "LOG_STATE") {
+    console.log("STATE", state);
+  }
+  // If action not matched
   return state;
 }
 
