@@ -44,3 +44,26 @@ Never called directly, it is intercepted and processed by a reducer.
 - Can include additional keys besides type like `payload`.
 
 > _store.dispatch()_ without passing in an action or object with key of _type_ will return an error.
+
+### Switch
+
+Instead of using if statements, use switch statement.
+
+```
+Example:
+if (action.type === "LOG") {
+    return {... state, count: state.count + 1}
+} else if (action.type === "DELETE") {
+    return {... state, count: state.count - 1}
+} else {
+    return state;
+};
+
+switch (action.type) {
+    case "LOG":
+        return {... state, count: state.count + 1}
+    case "DELETE":
+        return {... state, count: state.count - 1}
+    default: return state
+}
+```
